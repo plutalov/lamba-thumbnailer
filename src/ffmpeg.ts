@@ -90,7 +90,7 @@ export default class FFmpeg {
         const args: string[] = [
             "-ss", this.config.timestamp,
             "-i", this.input, // url to stream from
-            "-vf", "thumbnail,scale="+this.config.width+":"+this.config.height,
+            "-vf", "scale="+this.config.width+":"+this.config.height,
             "-qscale:v" ,this.config.quality.toString(),
             "-frames:v", "1",
             ];
